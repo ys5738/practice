@@ -1,0 +1,74 @@
+server:
+  port: 8088
+  tomcat:
+    accept-count: 1000
+    min-spare-threads: 100
+    max-threads: 500
+    max-connections: 1000
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://122.152.195.132:3306/test?autoReconnect=true&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: Yangs123
+#日志级别配置
+logging:
+  config:
+    level: DEBUG
+#命令执行超时时间，默认1000ms
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 8000
+
+
+#mybatis:
+#  #配置属性
+#  #config-locations: classpath:mybatis-config.xml
+#  #mapper-locations: classpath:com/simuwang/dc/mapper/xml/**/*.xm
+#  datasource:
+#    ds1:
+#      driverClassName: @spring.datasource.driverClassName@
+#      url: @spring.datasource.url@
+#      username: @spring.datasource.username@
+#      password: @spring.datasource.password@
+#      max-idle: @spring.datasource.maxIdle@
+#      max-wait: @spring.datasource.maxWait@
+#      min-idle: @spring.datasource.minIdle@
+#      max-total: @spring.datasource.maxTotal@
+#      initial-size: @spring.datasource.initialSize@
+#      validation-query: @spring.datasource.validationQuery@
+#      test-on-borrow: true
+#      test-while-idle: true
+#      time-between-eviction-runs-millis: 18800
+
+#缓存配置
+cache:
+  enable: true
+  expireTime: 3000
+#设置 redis配置
+redis:
+  host: 122.152.195.132
+  port: 6379
+  poolsize: 30
+  expireTime: 1000
+  password: Yangsong123
+  pool:
+    timeout : 800
+    max-wait: 500
+
+batch:
+  window:
+    intervalTime: 5000
+#db入库速率限制,数字格式，表示每秒插入数据库的速率
+db:
+  rate:
+    limit: 20
+
+#关闭security
+management:
+  security:
+    enabled: false
