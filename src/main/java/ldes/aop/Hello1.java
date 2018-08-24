@@ -1,4 +1,4 @@
-package ldes.other;
+package ldes.aop;
 
 public interface Hello1 {
     void sayHello();

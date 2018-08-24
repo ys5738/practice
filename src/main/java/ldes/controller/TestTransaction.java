@@ -24,10 +24,9 @@ public class TestTransaction {
         try{
             aTestDao.insertIntoA("asdf");
             aTestDao.insertIntoA("aaaaaa");
-        }catch (Exception e){
+                    }catch (Exception e){
             e.printStackTrace();
         }
     }
-    // 通过AOP 实现, 只有捕获RuntimeException 时才会发生回滚
 
 }

@@ -1,4 +1,4 @@
-package ldes.other;
+package ldes.aop;
 
 public class HelloImpl implements Hello1,Hello2{
 
