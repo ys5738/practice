@@ -4,6 +4,8 @@ import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -55,6 +57,23 @@ public class HashMapTest {
         System.out.println(d);
         System.out.println(e);
         System.out.println(f);
+    }
+
+    @Test
+    public void testList(){
+        LinkedList<String> l = new LinkedList<>();
+//        l.offer("123");
+//        l.offer("|asd");
+//        l.offer("bd");
+        Lock lock =new ReentrantLock();
+        l.push("123");
+        l.push("|asd");
+        l.push("bd");
+        System.out.println(l);
+        System.out.println(l.pop());
+        System.out.println(l.pop());
+        System.out.println(l.pop());
+
     }
 
 

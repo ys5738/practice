@@ -76,6 +76,11 @@
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+
         <!--集成spring-data-redis-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
